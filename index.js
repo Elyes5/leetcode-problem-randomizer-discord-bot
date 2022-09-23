@@ -24,7 +24,6 @@ const getRandomProblem = (data) => {
 
 }
 client.on("messageCreate", async (message) =>{
-    console.log(message)
 if (message.content === "-leetcode start") {
 
     fetch("https://leetcode.com/api/problems/all/").then(response => response.json())
