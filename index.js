@@ -13,7 +13,6 @@ const client = new Client({
 });
 var problem = "";
 const getRandomProblem = (data) => {
-    console.log(data);
     const randomNumber = Math.floor(Math.random() * (data.stat_status_pairs.length));
     if (data.stat_status_pairs[randomNumber].paid_only)
         getRandomProblem(data);
@@ -24,7 +23,6 @@ const getRandomProblem = (data) => {
     }
 
 }
-client.on("ready",() =>console.log("rdy"))
 client.on("messageCreate", async (message) =>{
     console.log(message)
 if (message.content === "-leetcode start") {
